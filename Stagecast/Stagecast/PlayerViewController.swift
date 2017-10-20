@@ -13,8 +13,12 @@ import AVFoundation
 
 class PlayerViewController: UIViewController {
     
+    @IBOutlet var label_live: UILabel!
+    
+    
     override func viewDidLoad() {
-        
+        label_live.layer.cornerRadius = 5
+        label_live.clipsToBounds = true
     }
     
     override func viewDidAppear(_ animated: Bool) {

@@ -176,33 +176,42 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lDx-2k-mUD">
-                                <rect key="frame" x="26" y="30" width="65" height="30"/>
-                                <state key="normal" title="C L O S E"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lDx-2k-mUD">
+                                <rect key="frame" x="301" y="30" width="48" height="48"/>
+                                <state key="normal" image="ic_close_white_48pt"/>
                                 <connections>
                                     <action selector="OnExitButtonClicked:" destination="tEW-Hg-IeX" eventType="touchUpInside" id="gEX-ch-s5d"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="L I V E" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KEx-eX-cIJ">
-                                <rect key="frame" x="291" y="34.5" width="48" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="L I V E" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KEx-eX-cIJ">
+                                <rect key="frame" x="26" y="43.5" width="70" height="21"/>
                                 <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="70" id="pQ4-ce-Sx3"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                         <constraints>
-                            <constraint firstAttribute="trailingMargin" secondItem="KEx-eX-cIJ" secondAttribute="trailing" constant="20" id="aso-08-UWa"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="lDx-2k-mUD" secondAttribute="trailing" constant="10" id="NCH-HW-p8H"/>
+                            <constraint firstItem="KEx-eX-cIJ" firstAttribute="leading" secondItem="smm-9r-QX0" secondAttribute="leadingMargin" constant="10" id="NlQ-UZ-FXa"/>
                             <constraint firstItem="lDx-2k-mUD" firstAttribute="top" secondItem="PSF-zS-cBp" secondAttribute="bottom" constant="10" id="hbL-dF-xfS"/>
                             <constraint firstItem="KEx-eX-cIJ" firstAttribute="centerY" secondItem="lDx-2k-mUD" secondAttribute="centerY" id="pEh-y0-bkV"/>
-                            <constraint firstItem="lDx-2k-mUD" firstAttribute="leading" secondItem="smm-9r-QX0" secondAttribute="leadingMargin" constant="10" id="qFx-9G-WBi"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="label_live" destination="KEx-eX-cIJ" id="Gcm-e2-mnT"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8co-IB-AA4" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="876" y="138.98050974512745"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="ic_close_white_48pt" width="48" height="48"/>
+    </resources>
 </document>
